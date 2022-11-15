@@ -1,5 +1,7 @@
 import pandas as pd
 import warnings
+#fit lsq
+from sklearn.linear_model import LinearRegression
 warnings.filterwarnings('ignore')
 
 #github key: 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
@@ -17,3 +19,7 @@ df.head(10)
 y = df['delta_price_X']
 X = df[df.columns[1:-1]]
 X.head()
+
+#fit model
+model=LinearRegression()
+model.fit(X,y)
