@@ -12,3 +12,8 @@ df3.head()
 
 df = df1.merge(df2, how='inner',on='Date').merge(df3,how='inner',on='Date')
 df.head(10)
+
+#get X and y
+y = df['delta_price_X']
+X = df[df.columns[1:-1]]
+X.head()
